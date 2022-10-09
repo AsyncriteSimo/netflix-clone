@@ -6,6 +6,7 @@ import LoginScreen from './components/Login/LoginScreen';
 import { auth } from './firebase';
 import {useDispatch, useSelector} from 'react-redux';
 import {logout, login, selectUser} from './features/userSlice'
+import ProfileScreen from './components/Profile/ProfileScreen';
 
 function App() {
 
@@ -38,7 +39,7 @@ function App() {
           <div className="app">
             <Routes>         
               <Route path="/" exact element={<HomeScreen />} />
-              
+              <Route path="/profile" exact element={<ProfileScreen />}/>
             </Routes>
           </div>
         )}      
